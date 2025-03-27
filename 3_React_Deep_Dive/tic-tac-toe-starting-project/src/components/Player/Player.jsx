@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-export default function Player({ name, symbol, isActive }) {
+export default function Player({ initialName, symbol, isActive }) {
+  const [newName, setNewName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
-  const [newName, setNewName] = useState(name);
 
   function handleClick() {
     setIsEditing((editing) => !editing);
